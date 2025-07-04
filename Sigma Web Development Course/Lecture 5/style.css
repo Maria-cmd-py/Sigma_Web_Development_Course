@@ -1,0 +1,13 @@
+td{
+    border: 2px solid black;
+}
+th{
+    border: 2px solid black;
+    background-color: lightblue;
+}
+caption{
+    font-size: 20px;
+    color: rgb(24, 24, 128);
+    font-weight: bold;
+    text-align: center;
+}
