@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website About Forms and Input Tags</title>
+</head>
+
+<body>
+    <form action="post">
+        <h1>Welcome to our Website</h1>
+        <h2>Form with Input Tags</h2>
+        <p>Fill the form below with your details:</p>
+        <h3>PlaceHolder Samples</h3>
+
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="Email" required>
+        </div>
+
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="Age" min="1" max="100" required>
+        </div>
+
+        <h3>Radio Button To Select Specific one Gender:</h3>
+
+        <div>
+            <label for="Male">Male</label>
+            <input type="radio" id="Male" name="Gender" value="Male">
+            <label for="Female">Female</label>
+            <input type="radio" id="Female" name="Gender" value="Female">
+        </div>
+
+        <h3>Checkboxes to Select Multiple Options:</h3>
+        <div>
+            <label for="Select">
+                Select Your Country:
+                <label for="country">Country:</label>
+                <select id="country" name="Country">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                    <option value="Australia">Australia</option>
+            </label>
+        </div>
+        
+        <h3>Checkboxes Samples</h3>
+        <div>
+            <label for="subscribe">Subscribe to our newsletter:</label>
+            <input type="checkbox" id="subscribe" name="Subscribe" value="Yes">
+        </div>
+
+        <h3>Text Area for Comments:</h3>
+        <div>
+            <label for="comments">Enter the comment here:</label>
+            <br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        </div>
+
+    </form>
+</body>
+
+</html>
