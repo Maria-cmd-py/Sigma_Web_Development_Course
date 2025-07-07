@@ -1,0 +1,21 @@
+.red{
+    color: red;
+}
+.bg-Yellow{
+    color: rgb(117, 117, 15);
+}
+div{
+    background-color: rgb(233, 163, 163);
+}
+#FirstDiv{
+    background-color: aqua;
+}
+#SecDiv{
+    background-color: rgb(184, 167, 153);
+}
+#ThirdDiv{
+    background-color: rgb(204, 181, 201);
+}
+#uniqueElement{
+    background-color: rgb(255, 204, 153);
+}
