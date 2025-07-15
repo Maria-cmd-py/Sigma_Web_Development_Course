@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <style>
+        .box {
+            box-sizing: border-box;
+            /* Ensures padding and border are included in the width */
+            border: 2px solid black;
+            /* width: 80px; */
+            /* vw - viewport width - used for responsive design */
+            width: 80vw;
+            /* Width set to 80% of the viewport width */
+            margin: auto;
+            /* Margin auto will be implemented on the block element not on the inline element */
+            /* padding: 20px; */
+            background-color: lightblue;
+        }
+
+        .container {
+            box-sizing: border-box;
+            /* Ensures padding and border are included in the width */
+            border: 2px solid black;
+            width: 80vw;
+            /* Width set to 80% of the viewport width */
+            margin: 23px auto;
+            /* Margin auto will be implemented on the block element not on the inline element */
+            /* padding: 20px; */
+            background-color: lightgreen;
+            height: 20vh;
+            /* Height set to 20% of the viewport height */
+        }
+
+        .em p {
+            font-size: 2em;
+            /* Font size set to 2 times the size of the parent element */
+        }
+
+        .rem {
+            font-size: 2rem;
+            /* Font size set to 2 times the size of the root element */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Pixel PX</h2>
+    <p>This is a paragraph sized with pixels (px).</p>
+    <div class="box">
+        This is a box sized with pixels (px).
+    </div>
+
+    <h2>Viewport Width VW</h2>
+    <p>This is a paragraph sized with viewport width (vw).</p>
+    <div class="container">
+        This is a box sized with viewport width (vw).
+    </div>
+
+    <h2>Viewport Height VH</h2>
+    <p>This is a paragraph sized with viewport height (vh).</p>
+
+    <h2>em - Relative to the font-size of the element</h2>
+    <p>This is a box sized with em units.em Font ka matlab ha ke isko jitne inherit kar ke jitna font size milne wala
+        tah is ke itne guna.</p>
+    <div class="em">
+        <p>Used for responsive design and typography.</p>
+    </div>
+    <h2>rem - Relative to the font-size of the root element</h2>
+    <p>This is a paragraph sized with rem units.</p>
+    <div class="rem">
+        <p>Used for consistent typography across the document.</p>
+    </div>
+    <h2>vmin - Relative to the smaller dimension of the viewport</h2>
+    <p> This is used for responsive design and can help maintain aspect ratios. in easy words, it takes the smaller
+        value between vw and vh. IN quick and easy way we say that it takes the minimum value between vw and vh.</p>
+    <h2>vmax - Relative to the larger dimension of the viewport</h2>
+    <p>This is used for responsive design and can help maintain aspect ratios. in easy words, it takes the larger value
+        between vw and vh.in Quick and most easy way we say that it takes the maximum value between vw and vh.</p>
+    <h2>px depends on resolution,
+        vh vw are device specific,
+        vmin and vmax depends on orientation,
+        em is multiplier on current value,
+        rem is a multiplier on current value in respective to the root element,
+        % depends on parent</h2>
+</body>
+
+</html>

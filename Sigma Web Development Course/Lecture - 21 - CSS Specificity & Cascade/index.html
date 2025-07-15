@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity and Cascade</title>
+    <style>
+        /* The specificity of this Selector is 1. */
+        h1 {
+            color: blue;
+        }
+        /* The specificity of this Selector is 10. */
+        .yellow {
+            color: yellow;
+        }
+
+        /* The specificity of this Selector is 10. */
+        .cpurple {
+            color: purple;
+        }
+
+        /* The specificity of this Selector is 1(h1) + (.cred)10 = 11. */
+        /* If you can write "h1.cred" OR "div.cred" { color: red; } then it's specificity will be increases. */
+        h1.cred { 
+            color: red;
+        }
+        /* This is an Example of Attribute Selector. And the Specificity is 10. */
+        [data-x="a"]{
+            background-color: greenyellow; 
+        }
+        
+
+        /* Specificity: inline styles have the highest priority */
+    </style>
+</head>
+<body>
+    <!-- If we write the inline style and we also create a class of three selectors and they can apply the color that are in the inline so if we want to apply the color of any one from the selector like if we want to apply the purple we can write the color: purple !important so they can gave the priority to the color Purple. -->
+    <h1 class="yellow cred cpurple"> CSS Specificity </h1>
+    <!-- Attribute Selector  -->
+    <h2 data-x="a">What is CSS Specificity?</h2> 
+
+    <p>Jab multiple classes apply hoon, to last wali CSS rule (.cpurple { color: purple; }) apply hoti hai, kyunki sab
+        class selectors ki specificity same hoti hai, aur jo baad mein likha ho wo jeet jata hai.</p>
+    <h2>Reason:</h2>
+    <p>All three classes .yellow, .cred, and .cpurple have same specificity (class = 0,1,0).
+        Last defined rule in CSS wins → So, purple color apply hoga.</p>
+    <h2>Priorities:</h2>
+    <ul>
+        <li>Inline styles (highest priority)</li>
+        <li>ID selectors</li>
+        <li>Class selectors</li>
+        <li>Element selectors (lowest priority)</li>
+    </ul>
+    <h2> Why in Specificity Priority Matters?</h2>
+    <p>Specificity priority ka matlab hai ki agar multiple CSS rules apply ho rahe hain, to browser ko pata hota hai
+        ki kaunsa rule zyada specific hai aur usi ko apply karta hai. Isse developers ko control milta hai ki unki
+        styles kaise render hongi.</p>
+    <h2>Example:</h2>
+    <p>Suppose agar h1 tag mein inline style add karte hain, to wo sabse zyada specific hoga aur usi ka color
+        apply hoga.</p>
+    <h1 style="color: green;">Inline Style Example</h1>
+    <p>Yahan h1 tag ka color green hai kyunki inline style ka specificity highest hota hai.</p>
+    <h2>Cascade Algorithm:</h2>
+    <p>Cascade algorithm ka matlab hai ki agar multiple CSS rules apply ho rahe hain, to browser unhe ek order
+        mein evaluate karta hai. Is order ko samajhna zaroori hai taaki aap apne styles ko sahi tarike se apply
+        kar sakein.</p> 
+    <h2>Specificity Calculation:</h2>
+    <p>Specificity calculate karne ke liye, aapko CSS selectors ki specificity value samajhni hogi. Ye value
+        different types of selectors ke liye alag hoti hai. Jaise:</p>
+    <ul>
+        <li>Inline styles: 1,0,0,0</li>
+        <li>ID selectors: 0,1,0,0</li>
+        <li>Class selectors: 0,0,1,0</li>
+        <li>Element selectors: 0,0,0,1</li>
+    </ul>
+</body>
+</html>
