@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Fonts,Text & Color Properties </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap'); */
+
+        h1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* fallback can be used to specify a backup font  if the primary font is not available then they move to next font*/
+            font-weight: bolder;
+        }
+
+        p {
+            font-family: "Baloo Bhaijaan 2", sans-serif;
+            text-decoration: underline;
+            font-style: italic;
+            font-size: 16px;
+            font-display: fallback;
+            /* fallback can be used to specify a backup font  */
+        }
+        h2{
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration:underline;
+            text-decoration-color: red;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 5px;
+            text-indent: 25px;
+        }
+        .text{
+            border: 2px solid black;
+            width: 145px;
+            word-break: break-all; /* This property breaks long words and wraps them to the next line */
+            /* text-overflow: ellipsis;
+            overflow: hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fonts</h1>
+    <p>Hey there! Today I am Practicing Fonts.</p>
+    <h2>about Fonts</h2>
+    <p class="text">
+        Fonts are a crucial aspect of web design, as they contribute to the overall aesthetics and readability of a website. Choosing the right font can enhance user experience and convey the intended message effectively.   
+    </p>
+</body>
+
+</html>

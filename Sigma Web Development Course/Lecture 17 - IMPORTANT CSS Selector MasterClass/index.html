@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector in CSS</title>
+    <style>
+        /* Element Selector */
+         div { 
+                /* color:aquamarine */
+                /* background-color: black; */
+         }
+        /* Class Selector */
+            .red {
+                color: red;
+                background-color: yellow;
+            }
+        /* ID Selector */
+            #Special {
+                color: blue;
+                background-color: rgb(91, 192, 91);
+            }
+            /* Child Selector */
+            /* If we want to change the color of paragraph that are inside the Div.This Will be implemented only if the paragraph is a direct child of the div they are not place in an  other tag like this: 
+            <article> 
+                <p> Hey I am the paragraph inside the Div. </p> 
+            </aticle> like this they will not be implemented  */
+            div > p { 
+                color: white;
+                background-color: black;
+            }
+            /* Descendant Selector */
+            /* If we want to change the color of paragraph that are inside the Div.This Will be implemented even if the paragraph is not a direct child of the div they are place in an  other tag like this: 
+            <article> 
+                <p> Hey I am the paragraph inside the Div. </p>
+            </aticle> like this they will be implemented  */
+            div p {
+                color: yellow;
+                background-color: blue;
+            }
+            /* Universal Selector */
+            /* This will apply to all elements in the document */
+            /* It is not recommended to use this selector as it will apply to all elements and can lead to performance issues */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            /* Pseudo Selector */
+            /* This will apply to all links that have been visited */
+            /* It is used to change the color of links that have been visited */
+            a:visited{ 
+                color: green;
+            }
+            /* This will apply to all links that have not been visited */
+            /* It is used to change the color of links that have not been visited */
+            a:link{
+                color: red;
+            }
+            /* This will apply to all links that are being clicked */
+            a:active{
+                color: blue;
+            }
+            /* This will apply to all links that are being hovered over they can apply the color in the background that are being clicked */
+            a:hover{
+                color: orange;
+            }
+            /* This will apply to the first child of any paragraph.If p is the 1st child of it's parent, apply these properties. */
+            p:first-child {
+                color: rgb(11, 229, 236);
+            }
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>I am first.</p>
+        <p>I am second.</p>
+    <div class="red">
+        I am a Div Element.
+    </div>
+    <!-- agar ap iskey color ya style ko changes karna chate hain aur ap chate hai ke ye changs jab ap style karo tu sif aik specific div par on tu ap class or ID ka use karein  and when we cahange the one colour of div it changes apply on all div -->
+    <div id="Special">
+        I am another Div Element.
+        <p>Hey I am the paragraph inside the Div.</p>
+        <article>
+            <p>Hey I am the paragraph inside the Article. I am not the child of Div so Child Property of Div will not be implemented on me</p>
+        </article>
+    </div>
+    <a target="_blank" href="https://www.google.com">Go To Google</a>
+    <a target="_blank" href="https://www.youtube.com">Go To Youtube</a>
+
+</body>
+</html>

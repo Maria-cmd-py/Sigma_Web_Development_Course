@@ -1,0 +1,9 @@
+p:first-child{
+    background-color: yellow;
+    color: red;
+}
+/* Descendet Selector */
+div p {
+    background-color: blue;
+    color: white;
+}

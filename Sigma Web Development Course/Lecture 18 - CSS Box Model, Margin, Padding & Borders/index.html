@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box {
+
+
+            background-color: rgb(3, 227, 243);
+        }
+
+        .box1 {
+            color: rgb(0, 0, 255);
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid rgb(0, 0, 0);
+            /* Q# 1) What can the height do?
+            It can set a fixed height for the box, ensuring that the content area is always 100px tall.
+            Q# 2) And What is the effect of box-sizing: border-box?
+            It ensures that the padding and border are included in the total height of the box, so the content area will not overflow the specified height.
+            Q# 3) Why the height will be change when we write the box-sizing: border-box?
+            The height will not change when using box-sizing: border-box; it ensures that the total height of the box (including padding and border) remains 100px.
+            Q# 4) What is the effect of box-sizing: border-box?
+            It ensures that the padding and border are included in the total height of the box, so the content area will not overflow the specified height.
+            Q# 5) What is the formula to calculate the height of the box?
+            The formula to calculate the height of the box is: height = content height + padding + border. Example: if the content height is 100px, padding is 10px (top and bottom), and border is 2px (top and bottom), then the total height will be 100 + 10 + 10 + 2 + 2 = 124px.
+            */
+            height: 100px;
+            /* Set a fixed height for the box that only the height for content will be applied */
+            box-sizing: border-box;
+            /* Ensures padding and border are included in the height */
+        }
+            /* What is margin-collapse?
+            if the  margin of both .box are same so it will be apply one time and if any of one box is greater mean the other box margin is 35 and one box is 25 so the that margin will be apply that are greater means 35 px is apply.*/
+        .box2 {
+            color: rgb(4, 83, 4);
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid rgb(224, 10, 10);
+            height: 100px;
+            box-sizing: border-box;
+        }
+    </style>
+    <title>CSS_BOX_Model_Margin and Padding</title>
+</head>
+
+<body>
+    <!-- <h1>What is CSS Box Model?</h1>
+    <p>Box Model are the boxes that wrap around every HTML element and consist of margins, borders, padding, and the actual content area.</p>
+    <h2>Components of the Box Model</h2>
+    <ul>
+        <li>Content: The actual content of the box, where text and images appear.</li>
+        <li>Padding: The space between the content and the border, inside the box.</li>
+        <li>Border: A line that surrounds the padding (if any) and content.</li>
+        <li>Margin: The space outside the border, separating the box from other elements.</li>
+    </ul>
+    <h2>Example of Box Model</h2>
+    <div style="border: 2px solid black; padding: 20px; margin: 30px;">
+        <p>This is an example of a box model with padding and margin.</p>
+    </div>
+    <h2>Understanding Margin and Padding</h2>
+    <p>Margin is the outermost layer, creating space between the box and other elements, while padding is the space inside the box, between the content and the border.</p>
+    <h2>Visual Representation</h2>
+    <img src="css-box-model.png" alt="Box Model Diagram" style="width: 100%; max-width: 600px;"> -->
+
+    <h1 style="text-align: center;">Real Practice</h1>
+    <div class="box box1">I am a Box.</div>
+    <div class="box box2">I am another Box.</div>
+</body>
+
+</html>
